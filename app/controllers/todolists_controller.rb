@@ -12,7 +12,8 @@ class TodolistsController < ApplicationController
     list.save
 
     # 3 . トップ画面へリダイレクト
-    redirect_to '/top'
+    # 詳細画面へリダイレクト
+    redirect_to todolist_path(list.id)
   end
 
   def index
